@@ -68,7 +68,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="Gdw-6a-Q2e" customClass="VideoCell" customModule="pomotv_tvos_client" customModuleProvider="target">
-                                <rect key="frame" x="20" y="80" width="400" height="300"/>
+                                <rect key="frame" x="20" y="225" width="400" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
@@ -128,10 +128,10 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="c1e-Kx-WW5" customClass="HeaderView" customModule="pomotv_tvos_client" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="1285" height="80"/>
+                            <rect key="frame" x="0.0" y="145" width="1285" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTj-93-F7q">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTj-93-F7q">
                                     <rect key="frame" x="917" y="19" width="86" height="43"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,11 +151,11 @@
                             <outlet property="delegate" destination="QAv-pD-gDU" id="NdI-uj-d5k"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Videos" id="n4f-fY-HX1"/>
+                    <navigationItem key="navigationItem" id="n5E-rV-NXz"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kt-ql-yl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2235" y="-723"/>
+            <point key="canvasLocation" x="3731.5" y="-723"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -168,12 +168,31 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="QAv-pD-gDU" kind="relationship" relationship="viewControllers" id="crQ-cb-tPF"/>
+                        <segue destination="itw-yU-Gcm" kind="relationship" relationship="viewControllers" id="crQ-cb-tPF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="14W-Nz-AMT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="itw-yU-Gcm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Videos" id="n4f-fY-HX1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0w3-bp-3PG">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QAv-pD-gDU" kind="relationship" relationship="rootViewController" id="oXc-Hy-LJA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rW-r8-G13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2234.5" y="-723"/>
         </scene>
     </scenes>
 </document>

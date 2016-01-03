@@ -81,7 +81,7 @@ class VideosViewController: UICollectionViewController {
             if let url = url {
                 let viewController = VideoPlayerViewController()
                 viewController.streamURL = url
-                self?.presentViewController(viewController, animated: true, completion: nil)
+                self?.navigationController?.pushViewController(viewController, animated: true)
                 
             }
             
