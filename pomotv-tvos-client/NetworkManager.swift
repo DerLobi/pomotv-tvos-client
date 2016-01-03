@@ -10,6 +10,7 @@ import Alamofire
 import YamlSwift
 import Alamofire_YamlSwift
 import XCDYouTubeKit
+import YTVimeoExtractor
 
 public class NetworkManager: NSObject {
     
@@ -18,6 +19,8 @@ public class NetworkManager: NSObject {
     private var videos: [String: [Video]]?
     
     private var youTubeVideos = [String: XCDYouTubeVideo]()
+    
+    private var vimeoVideos = [Int: YTVimeoVideo]()
 
     public func getAllVideos(completion: ( ([String: [Video]]?, ErrorType?) -> Void)) {
         
@@ -66,6 +69,25 @@ public class NetworkManager: NSObject {
                     completion(youTubeVideo.mediumThumbnailURL, nil)
                 }
             }
+        case .Vimeo(let id):
+            if let vimeoVideo = vimeoVideos[id] {
+                completion(vimeoVideo.thumbnailURL(), nil)
+                return
+            }
+            
+            YTVimeoExtractor.sharedExtractor().fetchVideoWithIdentifier(String(id), withReferer: nil) { [weak self] vimeoVideo, error in
+                
+                if let vimeoVideo = vimeoVideo {
+                    self?.vimeoVideos[id] = vimeoVideo
+                    completion(vimeoVideo.thumbnailURL(), nil)
+                    return
+                }
+                
+                if let error = error {
+                    completion(nil, error)
+                }
+            }            
+            
         default:
             break;
         }
@@ -75,19 +97,7 @@ public class NetworkManager: NSObject {
     public func streamingURLForVideo(video: Video, completion: (NSURL?, ErrorType?) -> Void) {
         switch video.source {
         case .Youtube(let id):
-        if let youTubeVideo = youTubeVideos[id] {
-            let bestStreamURL = youTubeVideo.streamURLs[XCDYouTubeVideoQuality.HD720.rawValue]
-                ?? youTubeVideo.streamURLs[XCDYouTubeVideoQuality.Medium360.rawValue]
-                ?? youTubeVideo.streamURLs[XCDYouTubeVideoQuality.Small240.rawValue]
-            
-            completion(bestStreamURL, nil)
-            return
-        }
-        
-        XCDYouTubeClient.defaultClient().getVideoWithIdentifier(id) { [weak self] youtubeVideo, error in
-            if let youTubeVideo = youtubeVideo {
-                self?.youTubeVideos[id] = youTubeVideo
-                
+            if let youTubeVideo = youTubeVideos[id] {
                 let bestStreamURL = youTubeVideo.streamURLs[XCDYouTubeVideoQuality.HD720.rawValue]
                     ?? youTubeVideo.streamURLs[XCDYouTubeVideoQuality.Medium360.rawValue]
                     ?? youTubeVideo.streamURLs[XCDYouTubeVideoQuality.Small240.rawValue]
@@ -95,10 +105,45 @@ public class NetworkManager: NSObject {
                 completion(bestStreamURL, nil)
                 return
             }
-        }
+            
+            XCDYouTubeClient.defaultClient().getVideoWithIdentifier(id) { [weak self] youtubeVideo, error in
+                if let youTubeVideo = youtubeVideo {
+                    self?.youTubeVideos[id] = youTubeVideo
+                    
+                    let bestStreamURL = youTubeVideo.streamURLs[XCDYouTubeVideoQuality.HD720.rawValue]
+                        ?? youTubeVideo.streamURLs[XCDYouTubeVideoQuality.Medium360.rawValue]
+                        ?? youTubeVideo.streamURLs[XCDYouTubeVideoQuality.Small240.rawValue]
+                    
+                    completion(bestStreamURL, nil)
+                    return
+                }
+                
+                if let error = error {
+                    completion(nil, error)
+                }
+
+            }
+        case .Vimeo(let id):
+            if let vimeoVideo = vimeoVideos[id] {
+                completion(vimeoVideo.bestStreamingURL(), nil)
+                return
+            }
+            
+            YTVimeoExtractor.sharedExtractor().fetchVideoWithIdentifier(String(id), withReferer: nil) { vimeoVideo, error in
+                
+                if let vimeoVideo = vimeoVideo {
+                    completion(vimeoVideo.bestStreamingURL(), nil)
+                    return
+                }
+                
+                if let error = error {
+                    completion(nil, error)
+                }
+            }
+
         default:
-        break;
-    }
+            break;
+        }
     
     }
 

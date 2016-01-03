@@ -20,6 +20,7 @@
 		CADBA24C1C39A9FE00E1EF24 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA24B1C39A9FE00E1EF24 /* NetworkManager.swift */; };
 		CADBA24E1C39B0B300E1EF24 /* PreloadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA24D1C39B0B300E1EF24 /* PreloadingViewController.swift */; };
 		CADBA2501C39BF0C00E1EF24 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA24F1C39BF0C00E1EF24 /* VideoDetailsViewController.swift */; };
+		CADBA2541C39E08800E1EF24 /* VideoURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CADBA24B1C39A9FE00E1EF24 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CADBA24D1C39B0B300E1EF24 /* PreloadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreloadingViewController.swift; sourceTree = "<group>"; };
 		CADBA24F1C39BF0C00E1EF24 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
+		CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoURLProvider.swift; sourceTree = "<group>"; };
 		DBB736C980BAAF5CE4CF8ED3 /* Pods-pomotv-tvos-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pomotv-tvos-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pomotv-tvos-client/Pods-pomotv-tvos-client.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				CADBA24B1C39A9FE00E1EF24 /* NetworkManager.swift */,
 				CADBA24D1C39B0B300E1EF24 /* PreloadingViewController.swift */,
 				CADBA24F1C39BF0C00E1EF24 /* VideoDetailsViewController.swift */,
+				CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */,
 			);
 			path = "pomotv-tvos-client";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				CADBA2501C39BF0C00E1EF24 /* VideoDetailsViewController.swift in Sources */,
 				CA6767C61C3958F4007BEBED /* AppDelegate.swift in Sources */,
 				CADBA2461C39755800E1EF24 /* VideoCell.swift in Sources */,
+				CADBA2541C39E08800E1EF24 /* VideoURLProvider.swift in Sources */,
 				CADBA2441C396F9D00E1EF24 /* HeaderView.swift in Sources */,
 				CADBA24C1C39A9FE00E1EF24 /* NetworkManager.swift in Sources */,
 				CADBA24A1C398D0700E1EF24 /* VideoPlayerViewController.swift in Sources */,

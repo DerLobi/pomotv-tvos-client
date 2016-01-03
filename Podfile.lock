@@ -7,13 +7,15 @@ PODS:
     - Alamofire (~> 3.1)
   - XCDYouTubeKit (2.4.3)
   - YamlSwift (1.3.1)
+  - YTVimeoExtractor (1.0.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 3.1)
   - Alamofire-YamlSwift (from `podspecs`)
   - AlamofireImage
   - XCDYouTubeKit (~> 2.4)
   - YamlSwift (from `podspecs`)
+  - YTVimeoExtractor (~> 1.0)
 
 EXTERNAL SOURCES:
   Alamofire-YamlSwift:
@@ -27,5 +29,6 @@ SPEC CHECKSUMS:
   AlamofireImage: bedb8a4bdfb98eda81ba12952fba6e9e90420922
   XCDYouTubeKit: a4a1a60faa7bc97744a1184501e82ef10ca15897
   YamlSwift: 732af691fd99740f101c02ce549d4915083c4b1c
+  YTVimeoExtractor: fa329a7cc99fc3d0b4e1fa6fd9d1d5eab1835c7d
 
 COCOAPODS: 0.39.0

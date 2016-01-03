@@ -12,6 +12,7 @@ import YamlSwift
 public enum VideoSource {
     case Unknown
     case Youtube(String)
+    case Vimeo(Int)
 }
 
 public struct Video {
@@ -29,8 +30,10 @@ public struct Video {
         
         if let youtubeID = yaml["youtube"].string {
             source = .Youtube(youtubeID)
+        } else if let vimeoID = yaml["vimeo"].int {
+            source = .Vimeo(vimeoID)
         } else {
             source = .Unknown
-        }        
+        }
     }
 }
