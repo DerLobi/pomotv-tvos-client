@@ -2,26 +2,30 @@ PODS:
   - Alamofire (3.1.4)
   - Alamofire-YamlSwift (1.0.0):
     - Alamofire (~> 3.0)
-    - Yaml
+    - YamlSwift
+  - AlamofireImage (2.2.0):
+    - Alamofire (~> 3.1)
   - XCDYouTubeKit (2.4.3)
-  - Yaml (1.3.1)
+  - YamlSwift (1.3.1)
 
 DEPENDENCIES:
   - Alamofire
   - Alamofire-YamlSwift (from `podspecs`)
+  - AlamofireImage
   - XCDYouTubeKit (~> 2.4)
-  - Yaml (from `podspecs`)
+  - YamlSwift (from `podspecs`)
 
 EXTERNAL SOURCES:
   Alamofire-YamlSwift:
-    :path: podspecs
-  Yaml:
-    :path: podspecs
+    :podspec: podspecs
+  YamlSwift:
+    :podspec: podspecs
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
-  Alamofire-YamlSwift: 4cd0855dec9ce63150680877e461053bd6518da6
+  Alamofire-YamlSwift: 80b6066f03656647ae75053d52af5473cfbf8fb8
+  AlamofireImage: bedb8a4bdfb98eda81ba12952fba6e9e90420922
   XCDYouTubeKit: a4a1a60faa7bc97744a1184501e82ef10ca15897
-  Yaml: eec274af8174eae7ea707dc4345d7105a8214617
+  YamlSwift: 732af691fd99740f101c02ce549d4915083c4b1c
 
 COCOAPODS: 0.39.0

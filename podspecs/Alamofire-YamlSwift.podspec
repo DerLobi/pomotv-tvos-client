@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.source_files = "Alamofire-YamlSwift/*.swift"
 
   s.dependency 'Alamofire', "~> 3.0"
-  s.dependency 'Yaml'
+  s.dependency 'YamlSwift'
 
 end
