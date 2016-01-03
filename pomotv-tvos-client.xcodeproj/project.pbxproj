@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		86D04FFD66ADA2E2663BB0A7 /* Pods_pomotv_tvos_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pomotv_tvos_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5D9B3CFC329F0116923C11 /* Pods-pomotv-tvos-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pomotv-tvos-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-pomotv-tvos-client/Pods-pomotv-tvos-client.release.xcconfig"; sourceTree = "<group>"; };
-		CA6767C21C3958F4007BEBED /* pomotv-tvos-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pomotv-tvos-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6767C21C3958F4007BEBED /* pomo.tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomo.tv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6767C51C3958F4007BEBED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA6767C71C3958F4007BEBED /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 		CA6767CC1C3958F4007BEBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		CA6767C31C3958F4007BEBED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA6767C21C3958F4007BEBED /* pomotv-tvos-client.app */,
+				CA6767C21C3958F4007BEBED /* pomo.tv.app */,
 				CA6767D51C3958F4007BEBED /* pomotv-tvos-clientTests.xctest */,
 			);
 			name = Products;
@@ -158,7 +158,7 @@
 			);
 			name = "pomotv-tvos-client";
 			productName = "pomotv-tvos-client";
-			productReference = CA6767C21C3958F4007BEBED /* pomotv-tvos-client.app */;
+			productReference = CA6767C21C3958F4007BEBED /* pomo.tv.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CA6767D41C3958F4007BEBED /* pomotv-tvos-clientTests */ = {
@@ -421,7 +421,7 @@
 				INFOPLIST_FILE = "pomotv-tvos-client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.pomotv-tvos-client";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = pomo.tv;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -435,7 +435,7 @@
 				INFOPLIST_FILE = "pomotv-tvos-client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.pomotv-tvos-client";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = pomo.tv;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
