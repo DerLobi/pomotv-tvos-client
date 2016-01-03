@@ -69,24 +69,19 @@ class VideosViewController: UICollectionViewController {
         
         return cell
     }
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        let sectionTitle = sections[indexPath.section]
-        let videosForSection = videos[sectionTitle]!
-        let video = videosForSection[indexPath.item]
-        
-        NetworkManager.sharedInstance.streamingURLForVideo(video) { [weak self] url, error in
-
-            if let url = url {
-                let viewController = VideoPlayerViewController()
-                viewController.streamURL = url
-                self?.navigationController?.pushViewController(viewController, animated: true)
-                
-            }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     
+        if let detailsViewController = segue.destinationViewController as? VideoDetailsViewController,
+            cell = sender as? UICollectionViewCell,
+            indexPath = collectionView?.indexPathForCell(cell) {
             
+            let sectionTitle = sections[indexPath.section]
+            let videosForSection = videos[sectionTitle]!
+            let video = videosForSection[indexPath.item]
+                
+            detailsViewController.video = video
         }
-        
     }
 
 }

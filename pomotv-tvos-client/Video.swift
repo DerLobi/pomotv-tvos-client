@@ -18,10 +18,12 @@ public struct Video {
     let title: String
     let speakers: [String]
     let tags: [String]
+    let language: String
     let source: VideoSource
 
     public init(yaml: Yaml) {
         title = yaml["title"].string!
+        language = yaml["language"].string!
         speakers = (yaml["speakers"].array?.map { $0.string! })!
         tags = yaml["tags"].array?.map { $0.string! } ??  []
         
