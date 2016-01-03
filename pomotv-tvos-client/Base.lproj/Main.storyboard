@@ -9,7 +9,7 @@
         <!--Preloading View Controller-->
         <scene sceneID="yVY-uu-QRb">
             <objects>
-                <viewController id="4wy-tP-yqE" customClass="PreloadingViewController" customModule="pomotv_tvos_client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4wy-tP-yqE" customClass="PreloadingViewController" customModule="pomo_tv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s0G-6G-gch"/>
                         <viewControllerLayoutGuide type="bottom" id="gTD-jd-4RX"/>
@@ -55,7 +55,7 @@
         <!--Videos-->
         <scene sceneID="qIw-f1-cZ6">
             <objects>
-                <collectionViewController title="Videos" id="QAv-pD-gDU" customClass="VideosViewController" customModule="pomotv_tvos_client" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Videos" id="QAv-pD-gDU" customClass="VideosViewController" customModule="pomo_tv" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RpA-VM-fVT">
                         <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                             <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="Gdw-6a-Q2e" customClass="VideoCell" customModule="pomotv_tvos_client" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="Gdw-6a-Q2e" customClass="VideoCell" customModule="pomo_tv" customModuleProvider="target">
                                 <rect key="frame" x="20" y="225" width="400" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -128,7 +128,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="c1e-Kx-WW5" customClass="HeaderView" customModule="pomotv_tvos_client" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="c1e-Kx-WW5" customClass="HeaderView" customModule="pomo_tv" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="145" width="1285" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -161,7 +161,7 @@
         <!--Video Details View Controller-->
         <scene sceneID="VQa-yx-9YL">
             <objects>
-                <viewController id="7y2-Pg-faW" customClass="VideoDetailsViewController" customModule="pomotv_tvos_client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7y2-Pg-faW" customClass="VideoDetailsViewController" customModule="pomo_tv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QPy-8l-zFz"/>
                         <viewControllerLayoutGuide type="bottom" id="Hfo-PI-ZOg"/>

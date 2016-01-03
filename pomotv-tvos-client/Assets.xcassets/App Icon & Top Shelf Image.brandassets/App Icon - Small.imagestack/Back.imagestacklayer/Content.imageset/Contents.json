@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "pomo-bg-icon.png",
       "scale" : "1x"
     }
   ],
