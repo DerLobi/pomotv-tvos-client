@@ -60,11 +60,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.2392199934" green="0.30979999899999999" blue="0.37255001069999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CbJ-HD-tSe">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="CbJ-HD-tSe">
                             <size key="itemSize" width="400" height="300"/>
                             <size key="headerReferenceSize" width="50" height="80"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="video" id="Gdw-6a-Q2e" customClass="VideoCell" customModule="pomo_tv" customModuleProvider="target">
@@ -180,7 +180,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4P-0e-mHZ">
-                                            <rect key="frame" x="-20" y="363" width="641" height="360"/>
+                                            <rect key="frame" x="-20" y="363" width="640" height="360"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="360" id="KE5-UN-dVA"/>
                                                 <constraint firstAttribute="width" constant="640" id="oH7-85-hHI"/>
@@ -259,7 +259,7 @@
                                         <constraint firstItem="bS2-qb-JAx" firstAttribute="width" secondItem="9Up-t7-ytn" secondAttribute="width" id="QV6-29-6Dp"/>
                                         <constraint firstItem="a4Y-rr-nhl" firstAttribute="leading" secondItem="bS2-qb-JAx" secondAttribute="trailing" constant="49" id="RXI-9Z-vQl"/>
                                         <constraint firstItem="bS2-qb-JAx" firstAttribute="leading" secondItem="9Up-t7-ytn" secondAttribute="leading" id="SwY-YZ-u0W"/>
-                                        <constraint firstItem="h7y-B7-FL5" firstAttribute="leading" secondItem="Z4P-0e-mHZ" secondAttribute="trailing" constant="40" id="UNw-cz-lPP"/>
+                                        <constraint firstItem="h7y-B7-FL5" firstAttribute="leading" secondItem="Z4P-0e-mHZ" secondAttribute="trailing" constant="41" id="UNw-cz-lPP"/>
                                         <constraint firstItem="h7y-B7-FL5" firstAttribute="top" secondItem="Z4P-0e-mHZ" secondAttribute="top" id="WEq-1H-4cc"/>
                                         <constraint firstItem="a4Y-rr-nhl" firstAttribute="top" secondItem="LeJ-g3-bqe" secondAttribute="bottom" constant="18" id="fch-9B-56j"/>
                                         <constraint firstItem="a4Y-rr-nhl" firstAttribute="centerY" secondItem="bS2-qb-JAx" secondAttribute="centerY" id="gUE-kG-o27"/>
