@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		078450C3298430A6D1A9FCC4 /* Pods_pomotv_tvos_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D04FFD66ADA2E2663BB0A7 /* Pods_pomotv_tvos_client.framework */; };
+		AD86FE9499873AE1FBFE3F06 /* Pods_pomotv_TopshelfExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79309F418100951857A979 /* Pods_pomotv_TopshelfExtension.framework */; };
 		CA6767C61C3958F4007BEBED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6767C51C3958F4007BEBED /* AppDelegate.swift */; };
 		CA6767C81C3958F4007BEBED /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6767C71C3958F4007BEBED /* VideosViewController.swift */; };
 		CA6767CD1C3958F4007BEBED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6767CB1C3958F4007BEBED /* Main.storyboard */; };
 		CA6767CF1C3958F4007BEBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA6767CE1C3958F4007BEBED /* Assets.xcassets */; };
 		CA6767DA1C3958F4007BEBED /* pomotv_tvos_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6767D91C3958F4007BEBED /* pomotv_tvos_clientTests.swift */; };
 		CAAB26B71C3ABA1B00A7B943 /* Edition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26B61C3ABA1B00A7B943 /* Edition.swift */; };
+		CAAB26BE1C3ACD3700A7B943 /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAB26BD1C3ACD3700A7B943 /* TVServices.framework */; };
+		CAAB26C11C3ACD3700A7B943 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26C01C3ACD3700A7B943 /* ServiceProvider.swift */; };
+		CAAB26C51C3ACD3700A7B943 /* pomotv-TopshelfExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CAAB26BC1C3ACD3700A7B943 /* pomotv-TopshelfExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CAAB26CA1C3AD4F200A7B943 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA24B1C39A9FE00E1EF24 /* NetworkManager.swift */; };
+		CAAB26CB1C3AD58100A7B943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2471C39783200E1EF24 /* Video.swift */; };
+		CAAB26CC1C3AD58500A7B943 /* Edition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26B61C3ABA1B00A7B943 /* Edition.swift */; };
+		CAAB26CD1C3AD5AB00A7B943 /* VideoURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */; };
 		CADBA2441C396F9D00E1EF24 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2431C396F9D00E1EF24 /* HeaderView.swift */; };
 		CADBA2461C39755800E1EF24 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2451C39755800E1EF24 /* VideoCell.swift */; };
 		CADBA2481C39783200E1EF24 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2471C39783200E1EF24 /* Video.swift */; };
@@ -32,10 +40,34 @@
 			remoteGlobalIDString = CA6767C11C3958F4007BEBED;
 			remoteInfo = "pomotv-tvos-client";
 		};
+		CAAB26C31C3ACD3700A7B943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA6767BA1C3958F4007BEBED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAAB26BB1C3ACD3700A7B943;
+			remoteInfo = TopshelfExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CAAB26C91C3ACD3700A7B943 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CAAB26C51C3ACD3700A7B943 /* pomotv-TopshelfExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C79309F418100951857A979 /* Pods_pomotv_TopshelfExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pomotv_TopshelfExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65239D53E50FFF078D75D498 /* Pods_TopshelfExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopshelfExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D04FFD66ADA2E2663BB0A7 /* Pods_pomotv_tvos_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pomotv_tvos_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB22F7BB09F0B09CC3626F12 /* Pods-pomotv-TopshelfExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pomotv-TopshelfExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-pomotv-TopshelfExtension/Pods-pomotv-TopshelfExtension.release.xcconfig"; sourceTree = "<group>"; };
 		BB5D9B3CFC329F0116923C11 /* Pods-pomotv-tvos-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pomotv-tvos-client.release.xcconfig"; path = "Pods/Target Support Files/Pods-pomotv-tvos-client/Pods-pomotv-tvos-client.release.xcconfig"; sourceTree = "<group>"; };
 		CA6767C21C3958F4007BEBED /* pomo.tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pomo.tv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6767C51C3958F4007BEBED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +79,10 @@
 		CA6767D91C3958F4007BEBED /* pomotv_tvos_clientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pomotv_tvos_clientTests.swift; sourceTree = "<group>"; };
 		CA6767DB1C3958F4007BEBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAAB26B61C3ABA1B00A7B943 /* Edition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edition.swift; sourceTree = "<group>"; };
+		CAAB26BC1C3ACD3700A7B943 /* pomotv-TopshelfExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "pomotv-TopshelfExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAAB26BD1C3ACD3700A7B943 /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
+		CAAB26C01C3ACD3700A7B943 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		CAAB26C21C3ACD3700A7B943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CADBA2431C396F9D00E1EF24 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CADBA2451C39755800E1EF24 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		CADBA2471C39783200E1EF24 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -55,7 +91,10 @@
 		CADBA24D1C39B0B300E1EF24 /* PreloadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreloadingViewController.swift; sourceTree = "<group>"; };
 		CADBA24F1C39BF0C00E1EF24 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
 		CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoURLProvider.swift; sourceTree = "<group>"; };
+		DA391E35799BB589F7C17DDE /* Pods-TopshelfExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopshelfExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopshelfExtension/Pods-TopshelfExtension.release.xcconfig"; sourceTree = "<group>"; };
 		DBB736C980BAAF5CE4CF8ED3 /* Pods-pomotv-tvos-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pomotv-tvos-client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pomotv-tvos-client/Pods-pomotv-tvos-client.debug.xcconfig"; sourceTree = "<group>"; };
+		F60E17EC6CF3A6B8E58A78EA /* Pods-TopshelfExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopshelfExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopshelfExtension/Pods-TopshelfExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCF2FE6E26234C800A4AB2B /* Pods-pomotv-TopshelfExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pomotv-TopshelfExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pomotv-TopshelfExtension/Pods-pomotv-TopshelfExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +113,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAAB26B91C3ACD3700A7B943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAAB26BE1C3ACD3700A7B943 /* TVServices.framework in Frameworks */,
+				AD86FE9499873AE1FBFE3F06 /* Pods_pomotv_TopshelfExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				86D04FFD66ADA2E2663BB0A7 /* Pods_pomotv_tvos_client.framework */,
+				CAAB26BD1C3ACD3700A7B943 /* TVServices.framework */,
+				65239D53E50FFF078D75D498 /* Pods_TopshelfExtension.framework */,
+				0C79309F418100951857A979 /* Pods_pomotv_TopshelfExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +141,10 @@
 			children = (
 				DBB736C980BAAF5CE4CF8ED3 /* Pods-pomotv-tvos-client.debug.xcconfig */,
 				BB5D9B3CFC329F0116923C11 /* Pods-pomotv-tvos-client.release.xcconfig */,
+				F60E17EC6CF3A6B8E58A78EA /* Pods-TopshelfExtension.debug.xcconfig */,
+				DA391E35799BB589F7C17DDE /* Pods-TopshelfExtension.release.xcconfig */,
+				FFCF2FE6E26234C800A4AB2B /* Pods-pomotv-TopshelfExtension.debug.xcconfig */,
+				AB22F7BB09F0B09CC3626F12 /* Pods-pomotv-TopshelfExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -99,6 +154,7 @@
 			children = (
 				CA6767C41C3958F4007BEBED /* pomotv-tvos-client */,
 				CA6767D81C3958F4007BEBED /* pomotv-tvos-clientTests */,
+				CAAB26BF1C3ACD3700A7B943 /* pomotv-TopshelfExtension */,
 				CA6767C31C3958F4007BEBED /* Products */,
 				C4A4F119F1A868158ABA8D73 /* Pods */,
 				864D063C0D8B5B6081EE0E2A /* Frameworks */,
@@ -110,6 +166,7 @@
 			children = (
 				CA6767C21C3958F4007BEBED /* pomo.tv.app */,
 				CA6767D51C3958F4007BEBED /* pomotv-tvos-clientTests.xctest */,
+				CAAB26BC1C3ACD3700A7B943 /* pomotv-TopshelfExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +201,15 @@
 			path = "pomotv-tvos-clientTests";
 			sourceTree = "<group>";
 		};
+		CAAB26BF1C3ACD3700A7B943 /* pomotv-TopshelfExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CAAB26C01C3ACD3700A7B943 /* ServiceProvider.swift */,
+				CAAB26C21C3ACD3700A7B943 /* Info.plist */,
+			);
+			path = "pomotv-TopshelfExtension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,10 +223,12 @@
 				CA6767C01C3958F4007BEBED /* Resources */,
 				8DDC9A642D97A3AB58276797 /* Embed Pods Frameworks */,
 				647CC9E0CAD6807A2E026730 /* Copy Pods Resources */,
+				CAAB26C91C3ACD3700A7B943 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CAAB26C41C3ACD3700A7B943 /* PBXTargetDependency */,
 			);
 			name = "pomotv-tvos-client";
 			productName = "pomotv-tvos-client";
@@ -185,6 +253,25 @@
 			productReference = CA6767D51C3958F4007BEBED /* pomotv-tvos-clientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CAAB26BB1C3ACD3700A7B943 /* pomotv-TopshelfExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAAB26C61C3ACD3700A7B943 /* Build configuration list for PBXNativeTarget "pomotv-TopshelfExtension" */;
+			buildPhases = (
+				B73F53C1E3B5750C46A4ACDC /* Check Pods Manifest.lock */,
+				CAAB26B81C3ACD3700A7B943 /* Sources */,
+				CAAB26B91C3ACD3700A7B943 /* Frameworks */,
+				CAAB26BA1C3ACD3700A7B943 /* Resources */,
+				B6BC2B0812663AE08C633F1A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pomotv-TopshelfExtension";
+			productName = TopshelfExtension;
+			productReference = CAAB26BC1C3ACD3700A7B943 /* pomotv-TopshelfExtension.appex */;
+			productType = "com.apple.product-type.tv-app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +288,9 @@
 					CA6767D41C3958F4007BEBED = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = CA6767C11C3958F4007BEBED;
+					};
+					CAAB26BB1C3ACD3700A7B943 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -219,6 +309,7 @@
 			targets = (
 				CA6767C11C3958F4007BEBED /* pomotv-tvos-client */,
 				CA6767D41C3958F4007BEBED /* pomotv-tvos-clientTests */,
+				CAAB26BB1C3ACD3700A7B943 /* pomotv-TopshelfExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +325,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CA6767D31C3958F4007BEBED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAAB26BA1C3ACD3700A7B943 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,6 +386,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pomotv-tvos-client/Pods-pomotv-tvos-client-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B6BC2B0812663AE08C633F1A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pomotv-TopshelfExtension/Pods-pomotv-TopshelfExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B73F53C1E3B5750C46A4ACDC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -317,6 +445,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAAB26B81C3ACD3700A7B943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAAB26CD1C3AD5AB00A7B943 /* VideoURLProvider.swift in Sources */,
+				CAAB26CC1C3AD58500A7B943 /* Edition.swift in Sources */,
+				CAAB26CA1C3AD4F200A7B943 /* NetworkManager.swift in Sources */,
+				CAAB26CB1C3AD58100A7B943 /* Video.swift in Sources */,
+				CAAB26C11C3ACD3700A7B943 /* ServiceProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -324,6 +464,11 @@
 			isa = PBXTargetDependency;
 			target = CA6767C11C3958F4007BEBED /* pomotv-tvos-client */;
 			targetProxy = CA6767D61C3958F4007BEBED /* PBXContainerItemProxy */;
+		};
+		CAAB26C41C3ACD3700A7B943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAAB26BB1C3ACD3700A7B943 /* pomotv-TopshelfExtension */;
+			targetProxy = CAAB26C31C3ACD3700A7B943 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -426,6 +571,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "pomotv-tvos-client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.pomotv-tvos-client";
@@ -440,6 +587,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "pomotv-tvos-client/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.pomotv-tvos-client";
@@ -472,6 +621,30 @@
 			};
 			name = Release;
 		};
+		CAAB26C71C3ACD3700A7B943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFCF2FE6E26234C800A4AB2B /* Pods-pomotv-TopshelfExtension.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "pomotv-TopshelfExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.pomotv-tvos-client.TopshelfExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CAAB26C81C3ACD3700A7B943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB22F7BB09F0B09CC3626F12 /* Pods-pomotv-TopshelfExtension.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "pomotv-TopshelfExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.pomotv-tvos-client.TopshelfExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,6 +671,15 @@
 			buildConfigurations = (
 				CA6767E21C3958F4007BEBED /* Debug */,
 				CA6767E31C3958F4007BEBED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAAB26C61C3ACD3700A7B943 /* Build configuration list for PBXNativeTarget "pomotv-TopshelfExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAAB26C71C3ACD3700A7B943 /* Debug */,
+				CAAB26C81C3ACD3700A7B943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

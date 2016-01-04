@@ -34,6 +34,10 @@ public struct Edition {
     public let url: NSURL?
     public let date: NSDate?
 
+    public var displayName: String {
+        return "\(event) \(edition)"
+    }
+    
     public init(yaml: Yaml) {
         event = yaml["event"].string!
         edition =  yaml["edition"].string ?? String(yaml["edition"].int!)
@@ -66,4 +70,10 @@ public struct Edition {
         }
         return parsedDate
     }
+}
+
+extension Edition: Equatable {}
+
+public func ==(lhs: Edition, rhs: Edition) -> Bool {
+    return lhs.event == rhs.event && lhs.edition == rhs.edition
 }
