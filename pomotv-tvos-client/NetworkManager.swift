@@ -21,15 +21,45 @@ public class NetworkManager: NSObject {
     private var youTubeVideos = [String: XCDYouTubeVideo]()
     
     private var vimeoVideos = [Int: YTVimeoVideo]()
+    
+    public func getMostRecentEdition(completion: (Edition?, ErrorType?) -> Void) {
+        
+        Alamofire.request(.GET, "https://raw.githubusercontent.com/chriseidhof/pomotv/master/data/editions.yml")
+            .responseYaml { response in
+                if let yaml = response.result.value, editions = yaml.array {
+     
+                    let parsedEditions = editions.map { edition in
+                        return Edition(yaml: edition)
+                    }
+                    
+                    let mostRecentEvent = parsedEditions.sort { edition1, edition2 in
+                        if let firstDate = edition1.date {
+                            if let secondDate = edition2.date {
+                                return firstDate.compare(secondDate) == .OrderedAscending
+                            } else {
+                                return false
+                            }
+                        } else {
+                            return true
+                        }
+                    }.last
+                    
+                    completion(mostRecentEvent, nil)
+                } else if let error = response.result.error {
+                    completion(nil, error)
+                }
+        }
 
-    public func getAllVideos(completion: ( ([String: [Video]]?, ErrorType?) -> Void)) {
+    }
+    
+    public func getAllVideos(completion: ([String: [Video]]?, ErrorType?) -> Void) {
         
         if let videos = videos {
             completion(videos, nil)
             return
         }
         
-        Alamofire.request(.GET, "https://cdn.rawgit.com/chriseidhof/pomotv/master/data/videos.yml")
+        Alamofire.request(.GET, "https://raw.githubusercontent.com/chriseidhof/pomotv/master/data/videos.yml")
             .responseYaml { [weak self] response in
                 if let yaml = response.result.value, events = yaml.dictionary {
                     
@@ -37,7 +67,7 @@ public class NetworkManager: NSObject {
                     var keys = events.map { key, value in
                         return key.string!
                     }
-                    
+
                     keys.sortInPlace()
                     self?.videos = [String: [Video]]()
                     
@@ -49,9 +79,13 @@ public class NetworkManager: NSObject {
                         }
                         
                     }
+                    completion(self?.videos, nil)
+                    
+                } else if let error = response.result.error {
+                    completion(nil, error)
                 }
                 
-                completion(self?.videos, nil)
+
         }
     }
     
