@@ -13,6 +13,7 @@
 		CA6767CD1C3958F4007BEBED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6767CB1C3958F4007BEBED /* Main.storyboard */; };
 		CA6767CF1C3958F4007BEBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA6767CE1C3958F4007BEBED /* Assets.xcassets */; };
 		CA6767DA1C3958F4007BEBED /* pomotv_tvos_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6767D91C3958F4007BEBED /* pomotv_tvos_clientTests.swift */; };
+		CAAB26B71C3ABA1B00A7B943 /* Edition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26B61C3ABA1B00A7B943 /* Edition.swift */; };
 		CADBA2441C396F9D00E1EF24 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2431C396F9D00E1EF24 /* HeaderView.swift */; };
 		CADBA2461C39755800E1EF24 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2451C39755800E1EF24 /* VideoCell.swift */; };
 		CADBA2481C39783200E1EF24 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2471C39783200E1EF24 /* Video.swift */; };
@@ -45,6 +46,7 @@
 		CA6767D51C3958F4007BEBED /* pomotv-tvos-clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pomotv-tvos-clientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6767D91C3958F4007BEBED /* pomotv_tvos_clientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pomotv_tvos_clientTests.swift; sourceTree = "<group>"; };
 		CA6767DB1C3958F4007BEBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAAB26B61C3ABA1B00A7B943 /* Edition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edition.swift; sourceTree = "<group>"; };
 		CADBA2431C396F9D00E1EF24 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CADBA2451C39755800E1EF24 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		CADBA2471C39783200E1EF24 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -116,18 +118,19 @@
 			isa = PBXGroup;
 			children = (
 				CA6767C51C3958F4007BEBED /* AppDelegate.swift */,
-				CA6767C71C3958F4007BEBED /* VideosViewController.swift */,
-				CA6767CB1C3958F4007BEBED /* Main.storyboard */,
 				CA6767CE1C3958F4007BEBED /* Assets.xcassets */,
-				CA6767D01C3958F4007BEBED /* Info.plist */,
 				CADBA2431C396F9D00E1EF24 /* HeaderView.swift */,
-				CADBA2451C39755800E1EF24 /* VideoCell.swift */,
-				CADBA2471C39783200E1EF24 /* Video.swift */,
-				CADBA2491C398D0700E1EF24 /* VideoPlayerViewController.swift */,
+				CA6767D01C3958F4007BEBED /* Info.plist */,
+				CA6767CB1C3958F4007BEBED /* Main.storyboard */,
 				CADBA24B1C39A9FE00E1EF24 /* NetworkManager.swift */,
 				CADBA24D1C39B0B300E1EF24 /* PreloadingViewController.swift */,
+				CADBA2471C39783200E1EF24 /* Video.swift */,
+				CADBA2451C39755800E1EF24 /* VideoCell.swift */,
 				CADBA24F1C39BF0C00E1EF24 /* VideoDetailsViewController.swift */,
+				CADBA2491C398D0700E1EF24 /* VideoPlayerViewController.swift */,
+				CA6767C71C3958F4007BEBED /* VideosViewController.swift */,
 				CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */,
+				CAAB26B61C3ABA1B00A7B943 /* Edition.swift */,
 			);
 			path = "pomotv-tvos-client";
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADBA2501C39BF0C00E1EF24 /* VideoDetailsViewController.swift in Sources */,
+				CAAB26B71C3ABA1B00A7B943 /* Edition.swift in Sources */,
 				CA6767C61C3958F4007BEBED /* AppDelegate.swift in Sources */,
 				CADBA2461C39755800E1EF24 /* VideoCell.swift in Sources */,
 				CADBA2541C39E08800E1EF24 /* VideoURLProvider.swift in Sources */,
