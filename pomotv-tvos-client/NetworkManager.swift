@@ -20,7 +20,7 @@ public class NetworkManager: NSObject {
     
     private var youTubeVideos = [String: XCDYouTubeVideo]()
     
-    private var vimeoVideos = [Int: YTVimeoVideo]()
+    private var vimeoVideos = [String: YTVimeoVideo]()
     
     public func getMostRecentEdition(completion: (Edition?, ErrorType?) -> Void) {
         
