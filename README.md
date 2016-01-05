@@ -6,7 +6,7 @@ This Apple TV app allows you to browse and play the videos listed on http://www.
 I hacked this together in a day, so the quality is not great. Use at your own risk.
 
 ## Features & ToDos
-- [ ] list recent videos
+- [x] list recent videos (top shelf extension)
 - [x] list all videos
 - [x] play YouTube videos
 - [x] play Vimeo videos
