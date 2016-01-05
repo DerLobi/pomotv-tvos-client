@@ -40,6 +40,7 @@ public class ServiceProvider: NSObject, TVTopShelfProvider {
             let videoItems = cachedVideos.map { video -> TVContentItem in
                 let identifier = TVContentIdentifier(identifier: video.identifier, container: containerItem?.contentIdentifier)!
                 let videoItem = TVContentItem(contentIdentifier: identifier)!
+                videoItem.displayURL = URLParser.displayURLForVideo(video)
                 videoItem.imageURL = cachedThumbnailURLs?[video.identifier]
                 videoItem.title = video.title
                 videoItem.imageShape = .HDTV
