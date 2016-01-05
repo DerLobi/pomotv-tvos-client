@@ -15,7 +15,7 @@ class PreloadingViewController: UIViewController {
 
         NetworkManager.sharedInstance.getAllVideos { [weak self] videos, error in
             if let _ = videos {
-                self?.performSegueWithIdentifier("preloadingComplete", sender: self)
+                self?.view.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tabBar")                
             } else {
                 // handle error
             }            
