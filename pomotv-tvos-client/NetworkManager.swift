@@ -16,7 +16,7 @@ public class NetworkManager: NSObject {
     
     public static let sharedInstance = NetworkManager()
     
-    private var videos: [String: [Video]]?
+    private var cachedVideos: [String: [Video]]?
     
     private var youTubeVideos = [String: XCDYouTubeVideo]()
     
@@ -54,8 +54,8 @@ public class NetworkManager: NSObject {
     
     public func getAllVideos(completion: ([String: [Video]]?, ErrorType?) -> Void) {
         
-        if let videos = videos {
-            completion(videos, nil)
+        if let cachedVideos = cachedVideos {
+            completion(cachedVideos, nil)
             return
         }
         
@@ -69,17 +69,17 @@ public class NetworkManager: NSObject {
                     }
 
                     keys.sortInPlace()
-                    self?.videos = [String: [Video]]()
+                    self?.cachedVideos = [String: [Video]]()
                     
                     for key in keys {
                         
                         if let yamlVideos = events[Yaml(stringLiteral: key)]?.array {
                             let parsedVideos = yamlVideos.map { Video(yaml: $0) }
-                            self?.videos![key] = parsedVideos
+                            self?.cachedVideos![key] = parsedVideos
                         }
                         
                     }
-                    completion(self?.videos, nil)
+                    completion(self?.cachedVideos, nil)
                     
                 } else if let error = response.result.error {
                     completion(nil, error)
@@ -87,6 +87,28 @@ public class NetworkManager: NSObject {
                 
 
         }
+    }
+
+    public func thumbnailURLsForVideos(videos: [Video], completion: ([String: NSURL]?, ErrorType?) -> Void) {
+        
+        let thumbnailGroup = dispatch_group_create()
+        
+        var urls = [String: NSURL]()
+        
+        for video in videos {
+            dispatch_group_enter(thumbnailGroup)
+            thumbnailURLForVideo(video) { url, error in
+                if let url = url {
+                    urls[video.identifier] = url
+                }
+                dispatch_group_leave(thumbnailGroup)
+            }
+        }
+        
+        dispatch_group_notify(thumbnailGroup, dispatch_get_main_queue()) {
+            completion(urls, nil)
+        }
+    
     }
     
     public func thumbnailURLForVideo(video: Video, completion: (NSURL?, ErrorType?) -> Void) {

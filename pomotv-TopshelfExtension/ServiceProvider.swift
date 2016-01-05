@@ -13,6 +13,8 @@ public class ServiceProvider: NSObject, TVTopShelfProvider {
 
     private var cachedVideos: [Video]?
     
+    private var cachedThumbnailURLs: [String: NSURL]?
+    
     private var cachedMostRecentEdition: Edition?
     
     override init() {
@@ -38,6 +40,7 @@ public class ServiceProvider: NSObject, TVTopShelfProvider {
             let videoItems = cachedVideos.map { video -> TVContentItem in
                 let identifier = TVContentIdentifier(identifier: video.identifier, container: containerItem?.contentIdentifier)!
                 let videoItem = TVContentItem(contentIdentifier: identifier)!
+                videoItem.imageURL = cachedThumbnailURLs?[video.identifier]
                 videoItem.title = video.title
                 videoItem.imageShape = .HDTV
                 return videoItem
@@ -57,9 +60,17 @@ public class ServiceProvider: NSObject, TVTopShelfProvider {
                 }
                 
                 NetworkManager.sharedInstance.getAllVideos { [weak self] videosByEvent, error in
-                    if let videosByEvent = videosByEvent {
-                        self?.cachedVideos = videosByEvent[edition.displayName]?.reverse()
-                         NSNotificationCenter.defaultCenter().postNotificationName(TVTopShelfItemsDidChangeNotification, object: nil)
+                    if let videosByEvent = videosByEvent, recentVideos = videosByEvent[edition.displayName] {
+                        self?.cachedVideos = recentVideos.reverse()
+                        
+                        NetworkManager.sharedInstance.thumbnailURLsForVideos(recentVideos.reverse()) { [weak self] urlsForVideos, error in
+                            if let urlsForVideos = urlsForVideos {
+                                self?.cachedThumbnailURLs = urlsForVideos
+                                NSNotificationCenter.defaultCenter().postNotificationName(TVTopShelfItemsDidChangeNotification, object: nil)
+                            }
+
+                        }
+                        
                     }
                 }
                 
