@@ -22,6 +22,10 @@
 		CAAB26CB1C3AD58100A7B943 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2471C39783200E1EF24 /* Video.swift */; };
 		CAAB26CC1C3AD58500A7B943 /* Edition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26B61C3ABA1B00A7B943 /* Edition.swift */; };
 		CAAB26CD1C3AD5AB00A7B943 /* VideoURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */; };
+		CAAB26CF1C3C1E1A00A7B943 /* URLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26CE1C3C1E1A00A7B943 /* URLParser.swift */; };
+		CAAB26D11C3C250F00A7B943 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D01C3C250F00A7B943 /* ArrayExtensions.swift */; };
+		CAAB26D21C3C360A00A7B943 /* URLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26CE1C3C1E1A00A7B943 /* URLParser.swift */; };
+		CAAB26D31C3C361600A7B943 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D01C3C250F00A7B943 /* ArrayExtensions.swift */; };
 		CADBA2441C396F9D00E1EF24 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2431C396F9D00E1EF24 /* HeaderView.swift */; };
 		CADBA2461C39755800E1EF24 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2451C39755800E1EF24 /* VideoCell.swift */; };
 		CADBA2481C39783200E1EF24 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA2471C39783200E1EF24 /* Video.swift */; };
@@ -83,6 +87,8 @@
 		CAAB26BD1C3ACD3700A7B943 /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
 		CAAB26C01C3ACD3700A7B943 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		CAAB26C21C3ACD3700A7B943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAAB26CE1C3C1E1A00A7B943 /* URLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParser.swift; sourceTree = "<group>"; };
+		CAAB26D01C3C250F00A7B943 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		CADBA2431C396F9D00E1EF24 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		CADBA2451C39755800E1EF24 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		CADBA2471C39783200E1EF24 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -176,18 +182,20 @@
 			children = (
 				CA6767C51C3958F4007BEBED /* AppDelegate.swift */,
 				CA6767CE1C3958F4007BEBED /* Assets.xcassets */,
+				CAAB26B61C3ABA1B00A7B943 /* Edition.swift */,
 				CADBA2431C396F9D00E1EF24 /* HeaderView.swift */,
 				CA6767D01C3958F4007BEBED /* Info.plist */,
 				CA6767CB1C3958F4007BEBED /* Main.storyboard */,
 				CADBA24B1C39A9FE00E1EF24 /* NetworkManager.swift */,
+				CAAB26D01C3C250F00A7B943 /* ArrayExtensions.swift */,
 				CADBA24D1C39B0B300E1EF24 /* PreloadingViewController.swift */,
+				CAAB26CE1C3C1E1A00A7B943 /* URLParser.swift */,
 				CADBA2471C39783200E1EF24 /* Video.swift */,
 				CADBA2451C39755800E1EF24 /* VideoCell.swift */,
 				CADBA24F1C39BF0C00E1EF24 /* VideoDetailsViewController.swift */,
 				CADBA2491C398D0700E1EF24 /* VideoPlayerViewController.swift */,
 				CA6767C71C3958F4007BEBED /* VideosViewController.swift */,
 				CADBA2531C39E08800E1EF24 /* VideoURLProvider.swift */,
-				CAAB26B61C3ABA1B00A7B943 /* Edition.swift */,
 			);
 			path = "pomotv-tvos-client";
 			sourceTree = "<group>";
@@ -424,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADBA2501C39BF0C00E1EF24 /* VideoDetailsViewController.swift in Sources */,
+				CAAB26D11C3C250F00A7B943 /* ArrayExtensions.swift in Sources */,
 				CAAB26B71C3ABA1B00A7B943 /* Edition.swift in Sources */,
 				CA6767C61C3958F4007BEBED /* AppDelegate.swift in Sources */,
 				CADBA2461C39755800E1EF24 /* VideoCell.swift in Sources */,
@@ -433,6 +442,7 @@
 				CADBA24A1C398D0700E1EF24 /* VideoPlayerViewController.swift in Sources */,
 				CADBA24E1C39B0B300E1EF24 /* PreloadingViewController.swift in Sources */,
 				CA6767C81C3958F4007BEBED /* VideosViewController.swift in Sources */,
+				CAAB26CF1C3C1E1A00A7B943 /* URLParser.swift in Sources */,
 				CADBA2481C39783200E1EF24 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +462,9 @@
 				CAAB26CD1C3AD5AB00A7B943 /* VideoURLProvider.swift in Sources */,
 				CAAB26CC1C3AD58500A7B943 /* Edition.swift in Sources */,
 				CAAB26CA1C3AD4F200A7B943 /* NetworkManager.swift in Sources */,
+				CAAB26D31C3C361600A7B943 /* ArrayExtensions.swift in Sources */,
 				CAAB26CB1C3AD58100A7B943 /* Video.swift in Sources */,
+				CAAB26D21C3C360A00A7B943 /* URLParser.swift in Sources */,
 				CAAB26C11C3ACD3700A7B943 /* ServiceProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
