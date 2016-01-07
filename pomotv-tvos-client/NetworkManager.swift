@@ -22,6 +22,8 @@ public class NetworkManager: NSObject {
     
     private var vimeoVideos = [String: YTVimeoVideo]()
     
+    private var wwdcURLs: [String: [String: String]]?
+    
     public func getMostRecentEdition(completion: (Edition?, ErrorType?) -> Void) {
         
         Alamofire.request(.GET, "https://raw.githubusercontent.com/chriseidhof/pomotv/master/data/editions.yml")
@@ -57,6 +59,14 @@ public class NetworkManager: NSObject {
         if let cachedVideos = cachedVideos {
             completion(cachedVideos, nil)
             return
+        }
+        
+        Alamofire.request(.GET, "https://raw.githubusercontent.com/DerLobi/wwdc-video-links/master/videoURLs.json")
+            .responseJSON { [weak self] response in
+                
+                if let wwdcURLs = response.result.value as? [String: [String: String]] {
+                    self?.wwdcURLs = wwdcURLs
+                }
         }
         
         Alamofire.request(.GET, "https://raw.githubusercontent.com/chriseidhof/pomotv/master/data/videos.yml")
@@ -143,7 +153,11 @@ public class NetworkManager: NSObject {
                     completion(nil, error)
                 }
             }            
-            
+        case .WWDC(let id):
+            if let wwdcVideo = wwdcURLs?[id], thumbnailURLString = wwdcVideo["thumbnailURL"] {
+                completion(NSURL(string: thumbnailURLString), nil)
+                return
+            }
         default:
             break;
         }
@@ -195,6 +209,11 @@ public class NetworkManager: NSObject {
                 if let error = error {
                     completion(nil, error)
                 }
+            }
+        case .WWDC(let id):
+            if let wwdcVideo = wwdcURLs?[id], streamingURLString = wwdcVideo["videoURL"] {
+                completion(NSURL(string: streamingURLString), nil)
+                return
             }
 
         default:
