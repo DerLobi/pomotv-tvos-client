@@ -10,7 +10,7 @@ I hacked this together in a day, so the quality is not great. Use at your own ri
 - [x] list all videos
 - [x] play YouTube videos
 - [x] play Vimeo videos
-- [ ] play WWDC videos
+- [x] play WWDC videos
 - [ ] browse speakers
 - [ ] browse tags
 - [ ] Search
